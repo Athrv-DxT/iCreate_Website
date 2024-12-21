@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #3e71d6c4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Event container style */
+.ev-container {
+    max-width: 100%;
+    padding: 0 10%;
+    text-align: center;
+    opacity: 0; /* Start with the container invisible */
+    animation: fadeIn 1s forwards; /* Fade in on page load */
+}
+
+/* Heading styles */
+h1 {
+    color: #1f2937;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: slideIn 1s ease-out; /* Slide-in animation for the heading */
+}
+
+/* Horizontal line style */
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Styling for the <p> tags */
+.info p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px; /* Space between paragraphs */
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation for the paragraphs */
+}
+
+/* Specific delay for each <p> tag */
+.info p:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.info p:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.info p:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Optional: Animations for zooming the content */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .ev-container {
+        padding: 0 5%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    .info p {
+        font-size: 18px;
+    }
+}
